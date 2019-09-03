@@ -1,0 +1,98 @@
+>> % part 2
+disp("part 2");
+% 1
+disp("1");
+DATA=[2 7 9 7; 3 1 5 6; 8 1 2 5;];
+disp(DATA);
+disp(DATA');
+disp("% transpose of DATA matrix (row and column elements swapped)");
+disp(DATA(:,[1 4]));
+disp("% gets the first and fourth columns of DATA");
+disp(reshape(DATA,2,6));
+disp("% reshapes the DATA matrix to have 2 rows and 6 columns");
+disp(flipud(DATA));
+disp("% flips DATA vertically, so the bottom row is on the top");
+disp(fliplr(DATA));
+disp("% flips DATA horizontally, so the left most row is on the right");
+disp([DATA; DATA(end,:)]);
+disp("% adds a copy of the last row of DATA to the end (making 4 rows)");
+disp(DATA(1:3,:));
+disp("% does not change DAYA matrix. just indexes itself");
+disp([DATA ; DATA(1:2,:)]);
+disp("% creates new array with DATA followed by the first 2 rows of DATA,");
+disp("% for a total length of 5 rows.");
+disp(sum(DATA'));
+disp("% sums each row in DATA, outputs a 1x3 (1 row, 3 col) matrix of results");
+disp(sum(DATA,2));
+disp("% sums each row in DATA, outputs a 3x1 (3 row, 1 col) matrix of results");
+disp([[DATA; sum(DATA)] [sum(DATA,2);sum(DATA(:))]]);
+disp("% output a 5x5 array, with sums of rows and colums");
+disp("% in the fifth column and 5th row, respectively. the 4x4 array starting on");
+disp("% the top left is the original DATA array");
+part 2
+1
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+
+     2     3     8
+     7     1     1
+     9     5     2
+     7     6     5
+
+% transpose of DATA matrix (row and column elements swapped)
+     2     7
+     3     6
+     8     5
+
+% gets the first and fourth columns of DATA
+     2     8     1     9     2     6
+     3     7     1     5     7     5
+
+% reshapes the DATA matrix to have 2 rows and 6 columns
+     8     1     2     5
+     3     1     5     6
+     2     7     9     7
+
+% flips DATA vertically, so the bottom row is on the top
+     7     9     7     2
+     6     5     1     3
+     5     2     1     8
+
+% flips DATA horizontally, so the left most row is on the right
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+     8     1     2     5
+
+% adds a copy of the last row of DATA to the end (making 4 rows)
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+
+% does not change DAYA matrix. just indexes itself
+     2     7     9     7
+     3     1     5     6
+     8     1     2     5
+     2     7     9     7
+     3     1     5     6
+
+% creates new array with DATA followed by the first 2 rows of DATA,
+% for a total length of 5 rows.
+    25    15    16
+
+% sums each row in DATA, outputs a 1x3 (1 row, 3 col) matrix of results
+    25
+    15
+    16
+
+% sums each row in DATA, outputs a 3x1 (3 row, 1 col) matrix of results
+     2     7     9     7    25
+     3     1     5     6    15
+     8     1     2     5    16
+    13     9    16    18    56
+
+% output a 5x5 array, with sums of rows and colums
+% in the fifth column and 5th row, respectively. the 4x4 array starting on
+% the top left is the original DATA array
+>> 
