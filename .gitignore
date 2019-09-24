@@ -3,6 +3,7 @@
 
 # OSX / *nix default autosave extension
 *.m~
+!.mlx
 
 # Compiled MEX binaries (all platforms)
 *.mex*
